@@ -16,8 +16,10 @@ const answerA = document.querySelector(".grid-container__Answer-A")
 const answerB = document.querySelector(".grid-container__Answer-B")
 const answerC = document.querySelector(".grid-container__Answer-C")
 const answerD = document.querySelector(".grid-container__Answer-D")
+//const correctAnswer = document.querySelector(".correctAnswer")
+//const incorrectAnswer = document.querySelector(".incorrectAnswer") 
 
-
+//console.log();
 
 //console.log(questionsArray.length);
 
@@ -92,6 +94,17 @@ const answerCorrect = (answer, index) => {
 
 /*const answerCorrect = (answer, index) => {
   if (index === questionAndAnswer.correct){
+    answer.style.backgroundColor = 'green';
+  } else {
+  answer.style.backgroundColor = 'red';
+  }
+  console.log(answerCorrect);
+  console.log(answer);
+  
+};*/
+
+/*const answerCorrect = (answer, index) => {
+  if (index === questionAndAnswer.correct){
     answer.classList.toggle('correctAnswer') 
   } else {
     answer.classList.toggle('incorrectAnswer') 
@@ -108,9 +121,6 @@ const answerCorrect = (answer, index) => {
   }
   
 }*/
-
-
-
 
 
 /*const hover = (answer) =>{
