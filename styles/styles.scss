@@ -1,0 +1,245 @@
+
+* {
+  
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: Tahoma,'Segoe UI', Geneva, Verdana, sans-serif;
+   
+}
+
+
+.grid-container {
+    height: 380px;
+    width: 830px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px 2px;
+    border: 2px solid black;
+    padding:  10px;
+    display: grid;
+    grid-template-columns: 0.6fr 1.3fr 1fr 0.9fr 1.2fr; 
+    grid-template-rows: 0.6fr 1.5fr 1fr 1fr 0.9fr; 
+  
+    grid-template-areas: 
+        "Speaker Millionaire Millionaire Millionaire icons"
+        "Timer Millionaire Millionaire Millionaire prize"
+        "Question Question Question Question prize"
+        "Answer Answer Answer Answer prize"
+        "Answer Answer Answer Answer prize"; 
+  
+    grid-gap: 1rem;
+    background-image: url('https://s3.amazonaws.com/html5.powershow.com/3671768/data/img0.png');
+
+  
+}
+
+.grid-container__prize {
+     grid-area: prize;
+     color: white;
+     background: rgb(22, 22, 162);
+     padding: 10px;
+     border-radius: 25px;
+     border: solid black 2px;
+    // color: #e1a02e;
+     }
+/*.grid-container__prize-1000{
+    //color: #fff;
+}*/
+.grid-container__prize-100{
+    //color: #fff;
+    background-image: url('https://wwbm.com/images/step_activ.png');
+    background-repeat: no-repeat;
+    background-size: 100%, 80%;
+
+} 
+
+
+/*.grid-container__prize-32000{
+    //color: #fff;
+}
+.grid-container__prize-1000000{
+    //color: #fff;
+}*/
+.grid-container__icons { grid-area: icons; }
+.grid-container__Answer {
+   grid-area: Answer;
+   display: flex; 
+   flex-direction: row;
+   background-color: transparent;
+ 
+}
+.grid-container__Answer-blockOne{
+width: 305px;
+background: transparent;
+
+}
+.grid-container__Answer-blockTwo{
+    width: 305px;
+    background: transparent;
+
+
+}
+.grid-container__Answer-A { 
+ display: flex;
+ height: 62px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: rgb(22, 22, 162);
+    padding: 10px;
+    border-radius: 25px;
+    border: solid black 2px;
+   // background-image: url('https://wwbm.com/images/sprite_ans.webp');
+   // background-repeat: no-repeat;
+   // background-size: 100%, 5% ;
+}
+ 
+.grid-container__Answer-A:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0;
+    transform: scale(1.02);
+    transform: transform 100ms;
+ 
+}
+
+ 
+.grid-container__Answer-B:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0;
+    transform: scale(1.02);
+    transform: transform 100ms;
+ 
+}
+
+ 
+.grid-container__Answer-C:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0;
+    transform: scale(1.02);
+    transform: transform 100ms;
+ 
+}
+
+ 
+.grid-container__Answer-D:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0;
+    transform: scale(1.02);
+    transform: transform 100ms;
+ 
+}
+
+.grid-container__Answer-B { 
+height: 62px;
+display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: rgb(22, 22, 162);
+    padding: 10px;
+    border-radius: 25px;
+    border: solid black 2px;
+
+ }
+
+
+.grid-container__Answer-C { 
+    height: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: rgb(22, 22, 162);
+    background: rgb(48, 201, 48), hide;
+    background-color: rgb(228, 28, 28), hide;
+    
+    padding: 10px;
+    border-radius: 25px;
+    border: solid black 2px;
+}
+.grid-container__Answer-D { 
+    height: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: rgb(22, 22, 162);
+    padding: 10px;
+    border-radius: 25px;
+    border: solid black 2px;
+
+
+}
+.grid-container__Question { 
+    grid-area: Question; 
+    //height: 70px;
+    //width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    //background: transparent;
+    //background-image: url('https://wwbm.com/images/quest.png');
+    //background-repeat: no-repeat;
+    //background-size: 100%, 100% ;
+    background: rgb(22, 22, 162);
+    padding: 10px;
+    border-radius: 25px;
+    border: solid black 2px;
+}
+.grid-container__Speaker { grid-area: Speaker; }
+.grid-container__Timer {
+  grid-area: Timer; 
+  background-color:  white;
+}
+.grid-container__Millionaire { 
+    grid-area: Millionaire;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+ }
+
+ .grid-container__Millionaire-logo {
+    height: 100px;
+    width: 100px;
+   
+}
+.correctAnswer{
+background-color: rgb(48, 201, 48);
+height: 200px;
+width: 500px;
+}
+.incorrectAnswer{
+background-color: rgb(228, 28, 28);
+}
+.hoverAnswer{
+ background-color: #e1a02e;
+}
+
+#overlay-1{
+    background-color: rgb(48, 201, 48);
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+#overlay-2{
+    background-color: rgb(228, 28, 28);
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
