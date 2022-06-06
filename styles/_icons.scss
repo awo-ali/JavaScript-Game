@@ -1,0 +1,63 @@
+
+
+.grid-container__icons { 
+    grid-area: icons;
+    display: flex;
+    justify-content: space-between;
+   
+   
+ }
+
+.icon-img-50{
+    height: 40px;
+    width: 50px;
+}
+.icon-img-50:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0;
+    transform: scale(1.02);
+    transform: transform 100ms;
+}
+
+.icon-img-audience{
+    height: 40px;
+    width: 50px;
+}
+.icon-img-audience:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0;
+    transform: scale(1.02);
+    transform: transform 100ms;
+}
+.icon-img-friend{
+    height: 40px;
+    width: 50px;
+}
+.icon-img-friend:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0;
+    transform: scale(1.02);
+    transform: transform 100ms;
+}
+
+.grid-container__Millionaire { 
+    grid-area: Millionaire;
+    display: flex;
+  
+    justify-content: center;
+   
+ }
+
+ .grid-container__Millionaire-logo {
+    height: 170px;
+    width: 170px;
+   
+}
+.grid-container__Speaker {
+    grid-area: Speaker; 
+    padding: 10px;
+ }
+ .speaker-icon{
+    height: 40px;
+    width: 50px;
+ }
