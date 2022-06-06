@@ -30,23 +30,112 @@
   border: solid black 2px;
 }
 
-/*.grid-container__prize-1000{
-    //color: #fff;
-}*/
 .grid-container__prize-100 {
+  padding-left: 20px;
+}
+
+.grid-container__prize-200 {
+  padding-left: 20px;
+}
+
+.grid-container__prize-300 {
+  padding-left: 20px;
+}
+
+.grid-container__prize-500 {
+  padding-left: 20px;
+}
+
+.grid-container__prize-1000 {
+  padding-left: 20px;
+}
+
+.grid-container__prize-2000 {
+  padding-left: 20px;
+}
+
+.grid-container__prize-4000 {
+  padding-left: 20px;
+}
+
+.grid-container__prize-8000 {
+  padding-left: 20px;
+}
+
+.grid-container__prize-16000 {
+  padding-left: 20px;
+}
+
+.grid-container__prize-32000 {
+  padding-left: 20px;
+}
+
+.grid-container__prize-64000 {
+  padding-left: 20px;
+}
+
+.grid-container__prize-125000 {
+  padding-left: 20px;
+}
+
+.grid-container__prize-250000 {
+  padding-left: 20px;
+}
+
+.grid-container__prize-500000 {
+  padding-left: 20px;
+}
+
+.grid-container__prize-1000000 {
+  padding-left: 20px;
+}
+
+.prizeScore {
   background-image: url("https://wwbm.com/images/step_activ.png");
   background-repeat: no-repeat;
   background-size: 100%, 80%;
 }
 
-/*.grid-container__prize-32000{
-    //color: #fff;
-}
-.grid-container__prize-1000000{
-    //color: #fff;
-}*/
 .grid-container__icons {
   grid-area: icons;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-img-50 {
+  height: 40px;
+  width: 50px;
+}
+
+.icon-img-50:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0;
+  transform: scale(1.02);
+  transform: transform 100ms;
+}
+
+.icon-img-audience {
+  height: 40px;
+  width: 50px;
+}
+
+.icon-img-audience:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0;
+  transform: scale(1.02);
+  transform: transform 100ms;
+}
+
+.icon-img-friend {
+  height: 40px;
+  width: 50px;
+}
+
+.icon-img-friend:hover {
+  cursor: pointer;
+  box-shadow: 0 0.4rem 1.4rem 0;
+  transform: scale(1.02);
+  transform: transform 100ms;
 }
 
 .grid-container__Answer {
@@ -153,80 +242,41 @@
   background: rgb(22, 22, 162);
   padding: 10px;
   border-radius: 25px;
-  border: solid black 2px;
 }
 
 .grid-container__Speaker {
   grid-area: Speaker;
+  padding: 10px;
+}
+
+.speaker-icon {
+  height: 40px;
+  width: 50px;
 }
 
 .grid-container__Timer {
   grid-area: Timer;
-  background-color: white;
+  padding: 20px;
+  color: white;
+  border-radius: 25px;
+  background-color: rgb(22, 22, 162);
 }
 
 .grid-container__Millionaire {
   grid-area: Millionaire;
   display: flex;
-  align-content: center;
   justify-content: center;
 }
 
 .grid-container__Millionaire-logo {
-  height: 100px;
-  width: 100px;
+  height: 170px;
+  width: 170px;
 }
 
 .correctAnswer {
   background-color: rgb(48, 201, 48);
-  height: 200px;
-  width: 500px;
 }
 
 .incorrectAnswer {
   background-color: rgb(228, 28, 28);
-}
-
-.hoverAnswer {
-  background-color: #e1a02e;
-}
-
-#overlay-1 {
-  background-color: rgb(48, 201, 48);
-  position: fixed;
-  /* Sit on top of the page content */
-  display: none;
-  /* Hidden by default */
-  width: 100%;
-  /* Full width (cover the whole page) */
-  height: 100%;
-  /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-  /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer;
-  /* Add a pointer on hover */
-}
-
-#overlay-2 {
-  background-color: rgb(228, 28, 28);
-  position: fixed;
-  /* Sit on top of the page content */
-  display: none;
-  /* Hidden by default */
-  width: 100%;
-  /* Full width (cover the whole page) */
-  height: 100%;
-  /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-  /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer;
-  /* Add a pointer on hover */
 }/*# sourceMappingURL=styles.css.map */
