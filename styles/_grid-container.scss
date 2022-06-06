@@ -1,0 +1,23 @@
+.grid-container {
+    height: 380px;
+    width: 830px;
+    border-radius: 25px;
+    box-shadow: 0 0 10px 2px;
+    border: 2px solid black;
+    padding:  10px;
+    display: grid;
+    grid-template-columns: 0.6fr 1.3fr 1fr 0.9fr 1.2fr; 
+    grid-template-rows: 0.6fr 1.5fr 1fr 1fr 0.9fr; 
+  
+    grid-template-areas: 
+        "Speaker Millionaire Millionaire Millionaire icons"
+        "Timer Millionaire Millionaire Millionaire prize"
+        "Question Question Question Question prize"
+        "Answer Answer Answer Answer prize"
+        "Answer Answer Answer Answer prize"; 
+  
+    grid-gap: 1rem;
+    background-image: url('https://s3.amazonaws.com/html5.powershow.com/3671768/data/img0.png');
+
+  
+}
