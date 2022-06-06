@@ -13,17 +13,9 @@ const answerC = document.querySelector(".grid-container__Answer-C")
 const answerD = document.querySelector(".grid-container__Answer-D")
 const prizeTotal = document.querySelectorAll(".grid-container__prizeTotal")
 const prizeContainer = document.querySelector(".grid-container__prize")
-//const prizeTotalDiv = prizeTotal.getElementByTagName();
-//console.log(prizeTotalDiv);
+
 
 console.log(prizeTotal);
-console.log(prizeTotal.length);
-console.log(prizeTotal[14]);
-
-
-  /*const totalPrize = (event) => {
-  for (let i=0; i< prizeTotal.length; i++)
-}*/
 
 
 //-------------------------------Functions-----------------------------------------//
@@ -39,7 +31,7 @@ const addRandomQuestion = (event) => {
     questionBlock.innerHTML = 
     ` <section class="grid-container__Question"> ${questionAndAnswer.question} </section>`
 };
-
+console.log(questionAndAnswer);
 
 const addAnswers = () => {
   answerA.innerText = `A: ${questionAndAnswer.content[0]}`
@@ -70,9 +62,6 @@ const answerCorrect = (answer, index) => {
   
 };
 
-
-
-console.log(answerCorrect);
 console.log(questionAndAnswer.correct);
 
 const clearAnswer = (answer, index) => {
@@ -85,33 +74,20 @@ await delay(5000);
 console.log(clearAnswer);
 };
 
+//const nextQuestion = 
+
 const totalPrize = (event) => {
-  for (let i=prizeTotal.length -1; i >= 0; i--){
+
+  for (let i = 0; i < prizeTotal.length; i++) {
     if (questionAndAnswer.correct){
-      [i].classList.add("prizeScore");
+      prizeTotal[i].classList.add("prizeScore");
     }else{
       prizeTotal[14].classList.add("prizeScore");
     }
   }
-  console.log(totalPrize);
+  
 }
 
-/*const totalPrize = (event) => {
-  if (index === questionAndAnswer.correct){
-    for(let i = 0; i < prizeTotal.length)
-  }
-}*/
-
-/*const totalPrize = (event) => {
-  if (questionAndAnswer.correct){
-    [...prizeTotal].forEach((div, index) =>{
-      div.classList.add("prizeScore");})
- } else {
-      //div.classList.add("prizeScore");
-      return
-    }
-    
-};*/
 
 //-----------------------------------------Return Function------------------------------------------//
 
