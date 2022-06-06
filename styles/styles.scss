@@ -1,99 +1,15 @@
 
-* {
-  
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 15px;
-    font-family: Tahoma,'Segoe UI', Geneva, Verdana, sans-serif;
-   
-}
+@use "./universal";
+@use "./grid-container";
+@use "./prizeTotal";
+@use ;
 
 
-.grid-container {
-    height: 380px;
-    width: 830px;
-    border-radius: 25px;
-    box-shadow: 0 0 10px 2px;
-    border: 2px solid black;
-    padding:  10px;
-    display: grid;
-    grid-template-columns: 0.6fr 1.3fr 1fr 0.9fr 1.2fr; 
-    grid-template-rows: 0.6fr 1.5fr 1fr 1fr 0.9fr; 
-  
-    grid-template-areas: 
-        "Speaker Millionaire Millionaire Millionaire icons"
-        "Timer Millionaire Millionaire Millionaire prize"
-        "Question Question Question Question prize"
-        "Answer Answer Answer Answer prize"
-        "Answer Answer Answer Answer prize"; 
-  
-    grid-gap: 1rem;
-    background-image: url('https://s3.amazonaws.com/html5.powershow.com/3671768/data/img0.png');
 
-  
-}
 
-.grid-container__prize {
-     grid-area: prize;
-     color: white;
-     background: rgb(22, 22, 162);
-     padding: 10px;
-     border-radius: 25px;
-     border: solid black 2px;
-   
-     }
 
-.grid-container__prize-100{
-    //background-image: url('https://wwbm.com/images/step_activ.png');
-   //background-repeat: no-repeat;
-    //background-size: 100%, 80%;
-    padding-left: 20px;
 
-} 
-.grid-container__prize-200{
-    padding-left: 20px;
-}
 
-.grid-container__prize-300{
-    padding-left: 20px;
-}
-.grid-container__prize-500{
-    padding-left: 20px;
-}
-.grid-container__prize-1000{
-    padding-left: 20px;
-}
-.grid-container__prize-2000{
-    padding-left: 20px;
-}
-.grid-container__prize-4000{
-    padding-left: 20px;
-}
-.grid-container__prize-8000{
-    padding-left: 20px;
-}
-.grid-container__prize-16000{
-    padding-left: 20px;
-}
-.grid-container__prize-32000{
-    padding-left: 20px;
-}
-.grid-container__prize-64000{
-    padding-left: 20px;
-}
-.grid-container__prize-125000{
-    padding-left: 20px;
-}
-.grid-container__prize-250000{
-    padding-left: 20px;
-}
-.grid-container__prize-500000{
-    padding-left: 20px;
-}
-.grid-container__prize-1000000{
-    padding-left: 20px;
-}
 .prizeScore{
     background-image: url('https://wwbm.com/images/step_activ.png');
     background-repeat: no-repeat;
@@ -240,20 +156,15 @@ display: flex;
 }
 .grid-container__Question { 
     grid-area: Question; 
-    //height: 70px;
-    //width: 600px;
+   
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    //background: transparent;
-    //background-image: url('https://wwbm.com/images/quest.png');
-    //background-repeat: no-repeat;
-    //background-size: 100%, 100% ;
     background: rgb(22, 22, 162);
     padding: 10px;
     border-radius: 25px;
-    //border: solid black 2px;
+    
 }
 .grid-container__Speaker {
     grid-area: Speaker; 
@@ -273,7 +184,7 @@ display: flex;
 .grid-container__Millionaire { 
     grid-area: Millionaire;
     display: flex;
-   // align-content: center;
+  
     justify-content: center;
    
  }
