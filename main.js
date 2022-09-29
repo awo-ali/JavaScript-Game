@@ -25,13 +25,16 @@ const randomQuestion = (array) =>{
   return keys[Math.floor(Math.random(questionsArray) * 75)]
 }
 
-const questionAndAnswer = randomQuestion(questionsArray)
+let questionAndAnswer = randomQuestion(questionsArray)
+let answerTotal = 14
+console.log(questionAndAnswer)
 
-const addRandomQuestion = (event) => {
+
+const addRandomQuestion = () => {
     questionBlock.innerHTML = 
     ` <section class="grid-container__Question"> ${questionAndAnswer.question} </section>`
 };
-console.log(questionAndAnswer);
+
 
 const addAnswers = () => {
   answerA.innerText = `A: ${questionAndAnswer.content[0]}`
@@ -53,38 +56,70 @@ const handleClick = (event) => {
   
 };
 
+
+const resetQuestionsAndAnswers = () => {
+  questionAndAnswer = randomQuestion(questionsArray)
+  addRandomQuestion(questionAndAnswer)
+  answerA.classList.remove("correctAnswer")
+  answerA.classList.remove("incorrectAnswer")
+  answerB.classList.remove("correctAnswer")
+  answerB.classList.remove("incorrectAnswer")
+  answerC.classList.remove("correctAnswer")
+  answerC.classList.remove("incorrectAnswer")
+  answerD.classList.remove("correctAnswer")
+  answerD.classList.remove("incorrectAnswer")
+  addAnswers()
+ 
+}
+
+
 const answerCorrect = (answer, index) => {
   if (index === questionAndAnswer.correct) {
     answer.classList.add("correctAnswer");
+    // answerTotal = answerTotal - 1 ;
+    console.log(answerTotal);
+    setTimeout(resetQuestionsAndAnswers, 1000);
   } else {
     answer.classList.add("incorrectAnswer");
+    answerTotal = 14;
+    setTimeout(resetQuestionsAndAnswers, 1000);
   }
   
 };
 
 console.log(questionAndAnswer.correct);
 
-const clearAnswer = (answer, index) => {
-  answer.classList.remove("correctAnswer");
-  answer.classList.remove("incorrectAnswer");
+const totalCorrectAnswer = (index) => {
+  if (index === questionAndAnswer.correct){
+    return answerTotal - 1;
+
+  }
+  
 }
-
-const clearAnswerDelay = async (clearAnswer) => {
-await delay(5000);
-console.log(clearAnswer);
-};
-
-//const nextQuestion = 
+console.log(answerTotal);
 
 const totalPrize = (event) => {
-
-  for (let i = 0; i < prizeTotal.length; i++) {
+// console.log(answerTotal);
+ console.log(event);
+ 
     if (questionAndAnswer.correct){
-      prizeTotal[i].classList.add("prizeScore");
+
+      if(event.target.id === "grid-container__AnswerButton-A") {
+       answerTotal = totalCorrectAnswer(0)
+        
+      } else if (event.target.id === "grid-container__AnswerButton-B"){
+        answerTotal =  totalCorrectAnswer(1)
+      } else if (event.target.id === "grid-container__AnswerButton-C"){
+        answerTotal =  totalCorrectAnswer(2)
+      } else if (event.target.id === "grid-container__AnswerButton-D"){
+        answerTotal = totalCorrectAnswer(3)
+      }
+      console.log(answerTotal);
+      prizeTotal[answerTotal].classList.add("prizeScore");
     }else{
       prizeTotal[14].classList.add("prizeScore");
     }
-  }
+  
   
 }
 
@@ -98,5 +133,5 @@ answerA.addEventListener("click", handleClick);
 answerB.addEventListener("click", handleClick);
 answerC.addEventListener("click", handleClick);
 answerD.addEventListener("click", handleClick);
-window.addEventListener("load", totalPrize);
-window.addEventListener("load", clearAnswer);
+answerBlock.addEventListener("click", totalPrize);
+
