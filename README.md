@@ -1,5 +1,5 @@
 # JavaScript-Game
-For my week-3 challenge, on the nology software engineering course, I attempted to build 'Who Wants To Be A Millionair?' online game. I accomplished this using HTML, CSS and Javascript.
+For my week-3 challenge, on the nology software engineering course, I attempted to build 'Who Wants To Be A Millionaire?' online game. I accomplished this using HTML, CSS and Javascript.
 
 We’re aiming for the following goals for this project:
 
