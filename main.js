@@ -26,7 +26,7 @@ const randomQuestion = (array) =>{
 }
 
 let questionAndAnswer = randomQuestion(questionsArray)
-let answerTotal = 14
+
 console.log(questionAndAnswer)
 
 
@@ -69,59 +69,61 @@ const resetQuestionsAndAnswers = () => {
   answerD.classList.remove("correctAnswer")
   answerD.classList.remove("incorrectAnswer")
   addAnswers()
- 
+  console.log(questionAndAnswer.correct);
+}
+
+var prizeTotalCounter = {
+    index: 14
+}
+
+var increasePrizeTotalCounter = () => {
+  // We add this if statement as the index cannot go any lower than 0.
+  // If a user gets to index 0, that means they've got all the questions correct.
+  if (prizeTotalCounter.index > 0) {
+    prizeTotalCounter.index--
+  }
+}
+
+var resetPrizeTotalCounter = () => {
+  prizeTotalCounter.index = 14
 }
 
 
 const answerCorrect = (answer, index) => {
   if (index === questionAndAnswer.correct) {
     answer.classList.add("correctAnswer");
-    // answerTotal = answerTotal - 1 ;
-    console.log(answerTotal);
     setTimeout(resetQuestionsAndAnswers, 1000);
+    increasePrizeTotal()
   } else {
     answer.classList.add("incorrectAnswer");
-    answerTotal = 14;
     setTimeout(resetQuestionsAndAnswers, 1000);
+    decreasePrizeTotal();
   }
   
 };
 
+
+const increasePrizeTotal = () => {
+  prizeTotal[prizeTotalCounter.index].classList.add("prizeScore")
+  // We have an if statement below because if the index is 14, that means the user has answered
+  // the first question correctly so all we need to do is select the $100 line. If the index is not
+  // 14, that means the user has already answered a question correctly, so we also need to un-highlight
+  // the total prize from the last answer they got right. 
+  if (prizeTotalCounter.index != 14) {
+    prizeTotal[prizeTotalCounter.index + 1].classList.remove("prizeScore")
+  } 
+  increasePrizeTotalCounter()  
+}
+
+const decreasePrizeTotal = () => {
+  // If the index is 14, that means, the user is on their first question so we don't need to reset the total prize box.
+  if (prizeTotalCounter.index != 14) {
+    prizeTotal[prizeTotalCounter.index + 1].classList.remove("prizeScore")
+    resetPrizeTotalCounter()
+  }  
+}
+
 console.log(questionAndAnswer.correct);
-
-const totalCorrectAnswer = (index) => {
-  if (index === questionAndAnswer.correct){
-    return answerTotal - 1;
-
-  }
-  
-}
-console.log(answerTotal);
-
-const totalPrize = (event) => {
-// console.log(answerTotal);
- console.log(event);
- 
-    if (questionAndAnswer.correct){
-
-      if(event.target.id === "grid-container__AnswerButton-A") {
-       answerTotal = totalCorrectAnswer(0)
-        
-      } else if (event.target.id === "grid-container__AnswerButton-B"){
-        answerTotal =  totalCorrectAnswer(1)
-      } else if (event.target.id === "grid-container__AnswerButton-C"){
-        answerTotal =  totalCorrectAnswer(2)
-      } else if (event.target.id === "grid-container__AnswerButton-D"){
-        answerTotal = totalCorrectAnswer(3)
-      }
-      console.log(answerTotal);
-      prizeTotal[answerTotal].classList.add("prizeScore");
-    }else{
-      prizeTotal[14].classList.add("prizeScore");
-    }
-  
-  
-}
 
 
 //-----------------------------------------Return Function------------------------------------------//
@@ -133,5 +135,5 @@ answerA.addEventListener("click", handleClick);
 answerB.addEventListener("click", handleClick);
 answerC.addEventListener("click", handleClick);
 answerD.addEventListener("click", handleClick);
-answerBlock.addEventListener("click", totalPrize);
+
 
